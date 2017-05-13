@@ -1,0 +1,58 @@
+<!--search-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jQuery library-->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Search University</title>
+</head>
+
+
+<body>
+
+<ul class="topnav">
+  <li><a class="active" href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li class="right"><a href="index.html">Back</a></li>
+</ul>
+
+<div class = "main">
+
+  <div class="body-content">
+  <div class="module">
+    <h3>Find Universities around you...</h3>
+  <!--It should come up with a map and to show a list of universities-->
+
+<button onclick="getLocation()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";}
+    }
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<input type="button" onclick="" value="Go next">
+  </div>
+</div>
+</div>
+	<footer>
+		<p>&copy; 2017 Team Johnny, Siv I & Leo</p>
+	</footer>
+</body>
+</html>
