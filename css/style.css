@@ -13,7 +13,18 @@
 	border-radius: 6px;
 }
 
+
 /*navigation bar*/
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height:auto;
+}
 
 ul.topnav {
     list-style-type: none;
@@ -40,30 +51,30 @@ ul.topnav li a.active {background-color: #1a1a1a;}
 
 ul.topnav li.right {float: right;}
 
-@media screen and (max-width: 600px){
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
-}
 
 
 /*main body*/
 
 .main
 {
-	width: 66%;
+	width: 50%;
 	height: 350px;
-	margin: 60px 16.66% 0 16.66%;
+	margin: 60px 25% 0 25%;
 	font-family: verdana;
 	background-color: #666666;
+  text-align: center;
 }
 
+.main img{
+  width: 100%;
+  max-width: 450px;
+}
 
 .main h1
 {
-    font-family: Intro-r;
+  font-family: Intro-r;
 	text-align: center;
 	margin-top: 20px;
-	font-size: 85px;
 	color: #FBB03B;
 }
 
@@ -86,6 +97,7 @@ ul.topnav li.right {float: right;}
 {
 	font-family: Intro-r;
 	font-size: 23.5px;
+  margin-top: 20px;
 	margin-bottom: 30px;
 	text-align: center;
     color: #fff;
@@ -105,7 +117,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    min-width:700px;
+    width: 100%;
 }
 
 h1 {
@@ -202,14 +214,18 @@ input::selection {
   background: transparent;
 }
 
+
+
 select,
 textarea,
 input[type="text"],
 input[type="password"],
-input[type="email"]
+input[type="email"],
+input[type="submit"]
 {
   height:30px;
   width:100%;;
+  max-width: 400px;
   display: inline-block;
   vertical-align: middle;
   height: 34px;
