@@ -6,18 +6,6 @@ and open the template in the editor.
 -->
 
 
-<?php
-  session_start();
-
-  if($_SESSION["UserID"]==null){
-      
-header('Location:loginpage.php');
-
-  }else{
-  echo $_SESSION["UserID"];
-  
-  
-  }?>
 
 <!DOCTYPE html>
 <head>
@@ -37,32 +25,37 @@ header('Location:loginpage.php');
 </head>
 
 <body>
+    <ul class="topnav">
+<?php
+  session_start();
+
+  
+  
+    if(!isset($_SESSION["UserID"])){
+      
+      echo '    <li><a class="active" href="#home">Home</a></li>
+                <li><a href="loginpage.php">Login</a></li>
+                  
+                <li class="right"><a href="signup.html">Sign Up</a></li>';
+
+  }else{
+       echo '   <li><a class="active" href="#home">Home</a></li>
+                <li><a href="unisearch.php">Uniserach</a></li>
+                
+                 <li><a href="logout.php">logout</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                ';
+
+  
+  
+  }?>
+ 
 	
 
-<ul class="topnav">
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="newpage.php">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="logout.php">logout</a></li>
-  <li class="right"><a href="/login.html">Sign Up</a></li>
+
+
 </ul>
 		
-    <div class="main">
-      
-    <h1>UniPass</h1>
-    <p class="introSub">Share your experiences in Uni</p>
-
-    <div class="module">
-         <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">   
-            <div class="alert alert-error"></div>
-                <input type="text" placeholder="User Name" name="username" required />
-                <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
-                <input type="submit" value="Login" name="login" class="btn btn-block btn-primary" />
-               </br>
-               <p><a href="/forgot.html">Forgot Password</a></p>
-            </form>
-    </div>
-    </div>
 
 
 

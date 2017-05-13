@@ -1,15 +1,3 @@
-<?php
-  session_start();
-
-  if($_SESSION["UserID"]==null){
-      
-header('Location:loginpage.php');
-
-  }else{
-  echo $_SESSION["UserID"];
-  
-  
-  }?>
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -32,14 +20,28 @@ header('Location:loginpage.php');
 
 <ul class="topnav">
   <li><a class="active" href="#home">Home</a></li>
-  <li><a href="unisearch.php">Unisearch</a></li>
+  <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
-  <li><a href="logout.php">logout</a></li>
   <li class="right"><a href="/login.html">Sign Up</a></li>
 </ul>
 		
 
+	<div class="main">
+			
+		<h1>UniPass</h1>
+		<p class="introSub">Share your experiences in Uni</p>
 
+		<div class="module">
+	       <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">   
+            <div class="alert alert-error"></div>
+                <input type="text" placeholder="User Name" name="username" required />
+                <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
+                <input type="submit" value="Login" name="login" class="btn btn-block btn-primary" />
+               </br>
+               <p><a href="/forgot.html">Forgot Password</a></p>
+            </form>
+		</div>
+    </div>
 
 	<div id="footer">
 		<p>&copy; 2017 Team Johnny, Siv I & Leo</p>

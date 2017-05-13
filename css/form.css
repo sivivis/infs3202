@@ -21,15 +21,6 @@ h1 {
   display: block;
 }
 
-#page-wrap{
-  max-width: 1500px;
-  width: 100%;
-  min-height: 1000px;
-  height: 100%;
-  margin: 0 auto;
-  position:relative;
-}
-
 header
 {
   background-color: #1a1a1a;
