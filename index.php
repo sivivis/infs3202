@@ -47,6 +47,22 @@ header('Location:loginpage.php');
   <li class="right"><a href="/login.html">Sign Up</a></li>
 </ul>
 		
+    <div class="main">
+      
+    <h1>UniPass</h1>
+    <p class="introSub">Share your experiences in Uni</p>
+
+    <div class="module">
+         <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">   
+            <div class="alert alert-error"></div>
+                <input type="text" placeholder="User Name" name="username" required />
+                <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
+                <input type="submit" value="Login" name="login" class="btn btn-block btn-primary" />
+               </br>
+               <p><a href="/forgot.html">Forgot Password</a></p>
+            </form>
+    </div>
+    </div>
 
 
 
